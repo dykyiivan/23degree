@@ -8,6 +8,7 @@ const gulp = require("gulp"),
   uglify = require("gulp-uglify"),
   concat = require("gulp-concat"),
   rename = require("gulp-rename"),
+  notify = require("gulp-notify"),
   del = require("del");
 
 
@@ -16,10 +17,9 @@ const gulp = require("gulp"),
 gulp.task("scss", function() {
   return gulp
     .src("app/scss/**/*.scss")
-    .pipe(plumber())
     .pipe(sass({ outputStyle: "compressed" })) //compressed expanded
-    .pipe(rename({ suffix: ".min" })) // якщо outputStyle: compresed ()
     .pipe(plumber())
+    .pipe(rename({ suffix: ".min" })) // якщо outputStyle: compresed ()
     .pipe(
       autoprefixer({
         overrideBrowserslist: ["> 0.1%"],
@@ -27,7 +27,8 @@ gulp.task("scss", function() {
       })
     )
     .pipe(gulp.dest("app/css"))
-    .pipe(browserSync.reload({ stream: true }));
+    .pipe(browserSync.reload({ stream: true }))
+    .pipe(notify("SCSS Done!"));
 });
 
 
@@ -38,27 +39,32 @@ gulp.task("clean", async function() {
 
 //Task для CSS завантажених бібліотек
 gulp.task("css", function() {
-  return gulp.src([
-    "node_modules/magnific-popup/dist/magnific-popup.css",
-    // "node_modules/slick-carousel/slick/slick.css"
-  ])
-  .pipe(concat("_libs.scss"))
-  .pipe(gulp.dest("app/scss"))
-  .pipe(browserSync.reload({stream: true}))
+  return gulp
+    .src([
+      "node_modules/magnific-popup/dist/magnific-popup.css",
+      // "node_modules/slick-carousel/slick/slick.css"
+    ])
+    .pipe(concat("_libs.scss"))
+    .pipe(gulp.dest("app/scss"))
+    .pipe(browserSync.reload({ stream: true }))
+    .pipe(notify("CSS Done!"));
 });
 
 
 // Task для відслідковування змін в HTML 
 gulp.task("html", function() {
   return gulp.src("app/*.html")
-   .pipe(browserSync.reload({stream: true}));
+   .pipe(browserSync.reload({stream: true}))
+   .pipe(notify("HTML reload done!"));
 
 });
 
 
 // Task для відслідковування змін в JS
 gulp.task("script", function () {
-  return gulp.src("app/js/*.js").pipe(browserSync.reload({ stream: true }));
+  return gulp.src("app/js/*.js")
+  .pipe(browserSync.reload({ stream: true }))
+  .pipe(notify("Scripts Done!"));
 });
 
 
@@ -76,6 +82,7 @@ gulp.task("js", function() {
       .pipe(uglify()) //мініфікація js
       .pipe(gulp.dest("app/js"))
       .pipe(browserSync.reload({ stream: true }))
+      .pipe(notify("JS Done!"))
   );
 });
 
@@ -104,6 +111,7 @@ gulp.task("watch", function() {
     gulp.watch("app/scss/**/*.scss", gulp.parallel("scss"));
     gulp.watch("app/*.html", gulp.parallel("html"));
     gulp.watch("app/js/*.js", gulp.parallel("script"));
+    
 });
 
 // LiveReload за допомогою Browser Sync
@@ -116,6 +124,7 @@ gulp.task("browser-sync", function () {
       port: 8080,
     }
   });
+
 });
 
 // Task Build з видалення усіх файлів з папки dist

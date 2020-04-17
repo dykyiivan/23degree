@@ -1,4 +1,5 @@
 //anything reusable such as buttons, navbars, cards etc.
+// Form
 .form {
   &__input {
     max-width: 290px;
@@ -16,6 +17,8 @@
     margin: 21px 0 0;
   }
 }
+
+// Buttons
 .button {
   padding: 20px 50px;
   font-size: 16px;
@@ -29,5 +32,24 @@
   cursor: pointer;
   &:hover {
     background: #0f88c0;
+  }
+}
+
+// Section Title
+.title {
+  position: relative;
+  font-size: 36px;
+  font-weight: 300;
+  color: #363636;
+  line-height: 38px;
+  &:after {
+    position: absolute;
+    bottom: -23px;
+    left: 50%;
+    width: 380px;
+    height: 2px;
+    background: #19b5fe;
+    transform: translateX(-50%);
+    content: "";
   }
 }
