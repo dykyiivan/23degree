@@ -1,0 +1,33 @@
+//anything reusable such as buttons, navbars, cards etc.
+.form {
+  &__input {
+    max-width: 290px;
+    width: 100%;
+    margin: 0 5px;
+    padding: 13px 27px;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 24px;
+    background: #fff;
+    border: none;
+    border-radius: 40px;
+  }
+  &__button {
+    margin: 21px 0 0;
+  }
+}
+.button {
+  padding: 20px 50px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 20px;
+  background: #19b5fe;
+  border: none;
+  border-radius: 40px;
+  transition: all .3s ease;
+  cursor: pointer;
+  &:hover {
+    background: #0f88c0;
+  }
+}

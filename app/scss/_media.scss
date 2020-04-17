@@ -1,0 +1,74 @@
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {  }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {  }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {  }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  }
+
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { 
+  .container {
+    padding: 0 15px;
+  }
+ }
+
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+  .hero__form {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .hero__heading,
+  .hero__subtitle {
+    margin-bottom: 25px;
+  }
+  .form__input {
+    margin-bottom: 20px;
+  }
+  .form__button {
+    margin: 0;
+  }
+  .hero__form::after {
+    display: none;
+  }
+  .scroll-down {
+    bottom: 10px;
+  }
+ }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+  .hero__heading {
+    line-height: 1.5;
+  }
+ }
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+  .menu__mobile {
+    margin-left: 30px;
+  }
+}
+
+// Extra small devices (portrait phones, less than 480px)
+@media (max-width: 479.98px) { 
+  .header__contact {
+    display: none;
+  }
+  .hero__title {
+    font-size: 36px;
+  }
+}
