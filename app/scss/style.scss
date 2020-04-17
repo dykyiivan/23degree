@@ -236,7 +236,7 @@ body {
   }
   &__row {
     display: flex;
-    justify-self: space-between;
+    justify-content: space-between;
     margin-top: 60px;
   }
   &__body {
@@ -249,7 +249,7 @@ body {
       order: 1;
     }
   }
-  }
+
   &__subtitle {
     font-size: 28px;
     font-weight: 300;
@@ -263,17 +263,26 @@ body {
     line-height: 24px;
   }
   &__button {
+    min-width: 180px;
+    padding: 15px;
     font-size: 14px;
     font-weight: normal;
   }
   &__image {
     img {
       max-width: 550px;
+      min-height: 320px;
+      transition: all 1s ease;
+      &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
     }
     &--order {
-      order: 1;
-    }
+      order: 0;
   }
+}
+}
 
 
 
