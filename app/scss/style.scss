@@ -72,8 +72,8 @@ body {
   position: relative;
   &__list {
     position: absolute;
-    top: 60px;
-    right: 0;
+    top: 90px;
+    right: -15px;
     width: 320px;
     margin: 0;
     padding: 20px;
@@ -245,8 +245,11 @@ body {
     justify-content: center;
     align-items: flex-start;
     max-width: 555px;
+    padding-right: 15px;
     &--order {
       order: 1;
+      padding-left: 15px;
+      padding-right: 0;
     }
   }
 
@@ -269,9 +272,10 @@ body {
     font-weight: normal;
   }
   &__image {
+    max-width: 550px;
     img {
-      max-width: 550px;
-      min-height: 320px;
+      max-width: 100%;
+      height: auto;
       transition: all 1s ease;
       &:hover {
         transform: scale(1.1);

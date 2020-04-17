@@ -49,10 +49,39 @@
   }
  }
 
+ // Small devices (landscape phones, less than 800px)
+@media (max-width: 799.98px) { 
+  .services__row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .services__body {
+    &--order {
+      order: 0;
+    }
+  }
+  .services__button {
+    margin: 0 auto 30px;
+  }
+ }
+
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) { 
   .hero__heading {
     line-height: 1.5;
+    font-size: 18px;
+  }
+  .hero__subtitle {
+    font-size: 28px;
+  }
+  .hero__text {
+    display: none;
+  }
+  .services__body {
+    padding-right: 0;
+  }
+  .services__body--order {
+    padding-left: 0;
   }
  }
 
@@ -61,6 +90,17 @@
   .menu__mobile {
     margin-left: 30px;
   }
+   .hero__title {
+    margin: 0;
+    font-size: 36px;
+  }
+  .hero__heading {
+    display: none;
+  }
+  .form__input {
+    margin-bottom: 10px;
+  }
+  
 }
 
 // Extra small devices (portrait phones, less than 480px)
@@ -68,7 +108,9 @@
   .header__contact {
     display: none;
   }
-  .hero__title {
-    font-size: 36px;
+  .title:after {
+    width: 260px;
   }
+ 
+  
 }
