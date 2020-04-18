@@ -42,7 +42,7 @@ gulp.task("css", function() {
   return gulp
     .src([
       "node_modules/magnific-popup/dist/magnific-popup.css",
-      // "node_modules/slick-carousel/slick/slick.css"
+      "node_modules/ion-rangeslider/css/ion.rangeSlider.min.css",
     ])
     .pipe(concat("_libs.scss"))
     .pipe(gulp.dest("app/scss"))
@@ -73,9 +73,8 @@ gulp.task("js", function() {
   return (
     gulp
       .src([
-        "node_modules/jquery/dist/jquery.js",
-        // "node_modules/slick-carousel/slick/slick.js",
-        // "node_modules/magnific-popup/dist/jquery.magnific-popup.js",
+        "node_modules/jquery/dist/jquery.js",  
+        "node_modules/ion-rangeslider/js/ion.rangeSlider.js",  
       ])
       .pipe(plumber())
       .pipe(concat("all.min.js")) // якщо мініфакція одразу розширення min.js
@@ -117,12 +116,10 @@ gulp.task("watch", function() {
 // LiveReload за допомогою Browser Sync
 gulp.task("browser-sync", function () {
   browserSync.init({
+    port: 8080,
     server: {
       baseDir: "app/",
     },
-    ui: {
-      port: 8080,
-    }
   });
 
 });

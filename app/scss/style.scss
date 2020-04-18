@@ -288,6 +288,221 @@ body {
 }
 }
 
+/*
+ *  Price section
+ */
+.price {
+  position: relative;
+  min-height: 620px;
+  padding: 60px 0 70px;
+  background: url(../images/price/price-bg.jpg) center no-repeat;
+  background-size: cover;
+  z-index: 9998;
+  &::after {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+    content: "";
+    z-index: -1;
+  }
+  &__title {
+    margin-bottom: 37px;
+    color: #fff;
+    text-align: center;
+    &::after {
+      background: #fff;
+    }
+  }
+  &__subtitle {
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 38px;
+    color: #fff;
+    text-align: center;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  &__button {
+    &:last-child {
+      margin-right: 0;
+    }
+    
+  }
+  &-result {
+    max-width: 470px;
+    width: 100%;
+    text-align: center;
+    &__item {
+      margin-bottom: 15px;
+    }
+    &__title {
+      margin-bottom: 5px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+      color: #fff;
+    }
+    &__count {
+      font-size: 32px;
+      font-weight: normal;
+      line-height: 1;
+      color: #fff;
+    }
+    &__text {
+      margin-top: 15px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+      color: #fff;
+      span {
+        display: block;
+        font-size: 18px;
+        font-weight: normal;
+      }
+    }
+    &__button {
+      width: 310px;
+      margin-top: 11px;
+      padding: 16px;
+      font-size: 14px;
+      line-height: 15px;
+    }
+  }
+}
+.button__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.calculator {
+  width: 650px;
+  padding: 20px 20px 25px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  &__title {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 24px;
+    color: #fff;
+  }
+}
+.rate {
+  margin-top: 8px;
+  @extend .calculator;
+  &__title {
+    @extend .calculator__title;
+  }
+}
+
+/* Tooltips */
+.con-tooltip {
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+}
+.tooltip {
+  visibility: hidden;
+  z-index: 1;
+  opacity: .40;
+  min-width: 320px;
+  width: 100%;
+  padding: 25px 35px;
+  background: #fff;
+  color: #464646;
+  position: absolute;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  transform: translateY(9px);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 3px rgba(56, 54, 54, 0.86);
+}
+.tooltip::after {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 24px 24px 0 24px;
+  border-color: #fff transparent transparent transparent;
+  position: absolute;
+}
+.con-tooltip:hover .tooltip {
+  
+  visibility: visible;
+  transform: translateY(-10px);
+  opacity: 1;
+  transition: .3s linear;
+  animation: outside 1s ease-in-out infinite  alternate;
+}
+@keyframes outside {
+  0%{
+    transform: translateY(6px); 
+  }
+
+  100%{
+    transform: translateY(1px); 
+  }
+}
+.bottom:hover {
+  transform: translateY(6px);
+}
+.bottom .tooltip { 
+  top: 115%; 
+  left: -34%; 
+}
+.bottom .tooltip::after{
+  top: -15%;
+  left: 50%;
+  transform: rotate(180deg) translateX(50%);
+}
+.irs--big .irs-min, .irs--big .irs-max {
+  top: 0;
+  color: white;
+  text-shadow: none;
+  background-color: transparent;
+  font-size: 16px;
+
+}
+.irs--big .irs-handle,
+.irs--big .irs-handle:hover,
+.irs--big .irs-handle:focus {
+  top: 27px;
+  width: 24px;
+  height: 24px;
+  border: 9px solid #19b5fe;
+  background: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.irs--big .irs-line {
+  background: rgba(255,255,255,0.5);
+}
+.irs--big .irs-bar {
+  background: transparent;
+  border: 6px solid #428bca;
+}
+.irs--big .irs-single {
+  background: transparent;
+}
+
+
+
+
+
+
+
+
+
 
 
 

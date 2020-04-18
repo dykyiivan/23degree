@@ -1,11 +1,26 @@
-// Extra small devices (portrait phones, less than 576px)
+// Extra small devices (portrait phones, less than 375px)
 // No media query for `xs` since this is the default in Bootstrap
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {  }
+// Small devices (landscape phones, 375px and up)
+@media (min-width: 375px) { 
+ 
+ }
+ // Extra small devices (portrait phones, less than 425px)
 
+
+// Small devices (landscape phones, 425px and up)
+@media (min-width: 425px) { 
+ 
+ }
+
+ // Small devices (landscape phones, 575px and up)
+@media (min-width: 575px) { 
+ 
+ } 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {  }
+@media (min-width: 768px) { 
+  
+ }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {  }
@@ -20,6 +35,14 @@
 @media (max-width: 1199.98px) { 
   .container {
     padding: 0 15px;
+  }
+  .price__inner {
+    justify-content: center;
+  }
+  .price-calculator__inner {
+    margin-bottom: 30px;
+    max-width: 650px;
+    width: 100%;
   }
  }
 
@@ -83,8 +106,21 @@
   .services__body--order {
     padding-left: 0;
   }
+.calculator {
+  width: 100%;
  }
 
+
+ // Extra small devices (portrait phones, less than 650px)
+@media (max-width: 649.98px) { 
+  .button__row {
+    justify-content: center;
+  }
+  .button__rate {
+    margin: 5px;
+  }
+  
+} 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 
   .menu__mobile {
@@ -111,6 +147,8 @@
   .title:after {
     width: 260px;
   }
- 
-  
+  .price-result__button {
+    max-width: 100%;
+  }
+}
 }

@@ -111,9 +111,58 @@
 </section>
 <!-- /.services -->
 
-
-
-
+<section class="price">
+  <div class="container">
+    <h2 class="price__title title">Расчитать стоимость</h2>
+    <h3 class="price__subtitle">Расчитайте предварительную стоимость разработки интерьера</h3>
+    <div class="price__inner">
+      <div class="price-calculator__inner">
+      <div class="price__calculator calculator">
+        <h3 class="calculator__title">Площадь помещения:</h3>
+        <input  class="js-range-slider" type="range" id="calculator" name="calculator">
+      </div>
+      <div class="price__rate rate">
+        <h3 class="rate__title">Выберите пакет:</h3>
+        <div class="button__row">
+          <button class="button__rate price__button con-tooltip bottom">Light
+            <span class="tooltip ">
+              <span>План расстановки мебели 3D визуализация.</span>
+            </span>
+          </button>
+          <button class="button__rate price__button con-tooltip bottom">Medium
+            <span class="tooltip ">
+              <span>План расстановки мебели 3D визуализация. Все рабочие чертежи (план полов, план потолка).</span>
+            </span>
+          </button>
+          <button class="button__rate price__button con-tooltip bottom">Full
+            <span class="tooltip ">
+              <span>План расстановки мебели 3D визуализация. Все рабочие чертежи (план полов, план потолка, развертки по стенам, план электросетей).</span>
+            </span>
+          </button>
+        </div>
+      </div>
+      </div>
+      <div class="price-result">
+        <div class="price-result__item">
+          <h4 class="price-result__title">Площадь помещения:</h4>
+          <span class="price-result__count">1 000 м<sup>2</sup></span>  
+        </div>
+        <div class="price-result__item">
+          <h4 class="price-result__title">Средняя стоимость м<sup>2</sup>:</h4>
+          <span class="price-result__count">4 850 тг.</span>
+        </div>
+        <div class="price-result__item">
+          <h4 class="price-result__title">Средняя стоимость объекта:</h4>
+          <span class="price-result__count">48 500 тг.</span>
+        </div>
+        <button class="button price-result__button">Получить консультацию специалиста</button>
+        <p class="price-result__text"> или позвоните нам по телефону:
+        <span>+ 7 727 388 71 77</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /.price -->
 
   <!-- All libs min js -->
   <script src="js/all.min.js"></script>

@@ -16,4 +16,16 @@ $(function() {
     $('.menu__burger,.menu__list').toggleClass('active');
   });
 
+
+  $(".js-range-slider").ionRangeSlider({
+    // type: "double",
+    skin: "big",
+    min: 100,
+    max: 500000,
+    from: 50000,
+    to: 250000,
+    step: 10000,
+    postfix: " м<sup>2</sup>",
+  });
+
 });
