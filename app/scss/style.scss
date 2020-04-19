@@ -577,6 +577,7 @@ body {
  */
 .advantages {
   padding: 50px 0 70px;
+  background-color: #f5f9fa;
   &__title {
     margin-bottom: 65px;
     text-align: center;
@@ -584,12 +585,35 @@ body {
   &__inner {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
+    margin-bottom: 60px;
   }
   &__item {
     max-width: 265px;
     text-align: center;
+  }
+  &__icon {
+    height: 65px;
+    margin-bottom: 30px;
+  }
+  &-row {
+    display: flex;
+    justify-content: center;
+    &__item {
+      max-width: 265px;
+      width: 100%;
+      margin: 0 1%;
+    }
+  }
+  &__icon:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 125px;
+    margin: auto;
+    margin-top: 15px;
+    background: $btn-background;
   }
 }
 
