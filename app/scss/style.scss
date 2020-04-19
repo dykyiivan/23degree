@@ -597,10 +597,16 @@ body {
     height: 65px;
     margin-bottom: 30px;
   }
+  &__text {
+    font-size: 14px;
+    font-weight: normal;
+    color: #3f3f3f;
+    line-height: 20px;
+  }
   &-row {
     display: flex;
     justify-content: center;
-    &__item {
+    .advantages__item {
       max-width: 265px;
       width: 100%;
       margin: 0 1%;
@@ -616,6 +622,33 @@ body {
     background: $btn-background;
   }
 }
+
+/*
+ *  Process section
+ */
+ .process {
+   padding: 70px 0;
+   &__title {
+     margin-bottom: 60px;
+     text-align: center;
+   }
+   &__inner {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     flex-wrap: wrap;
+   }
+   &__subtitle {
+     display: block;
+     max-width: 570px;
+     width: 100%;
+     font-size: 30px;
+     font-weight: 300;
+     color: #464646;
+     text-align: center;
+   }
+ }
+
 
 
 
