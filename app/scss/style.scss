@@ -649,7 +649,22 @@ body {
    }
  }
 
-
+/*
+ *  Customers section
+ */
+ .customers {
+   padding: 50px 0;
+   background-color: #f5f9fa;
+   &__title {
+     margin-bottom: 60px;
+     text-align: center;
+   }
+   &__inner {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+ }
 
 
 
