@@ -60,6 +60,14 @@
    blockquote::after {
     right: -19px;
   }
+  .blog__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+  .blog__item {
+    margin-bottom: 50px; 
+  }
  }
 
 
