@@ -1,4 +1,7 @@
 $(function() {
+
+  'use strict';
+
   // Header scroll
   $(window).scroll(function () {
     var height = $(window).scrollTop();
@@ -16,9 +19,8 @@ $(function() {
     $('.menu__burger,.menu__list').toggleClass('active');
   });
 
-
+  // Price slider
   $(".js-range-slider").ionRangeSlider({
-    // type: "double",
     skin: "big",
     min: 100,
     max: 500000,
@@ -27,5 +29,45 @@ $(function() {
     step: 10000,
     postfix: " м<sup>2</sup>",
   });
+
+  // Slick Slider 
+  $('.customers__inner').slick({
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 4
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 375,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+          centerPadding: '0px'
+        }
+      }
+    ]
+  });
+
 
 });

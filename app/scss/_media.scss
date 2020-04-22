@@ -44,8 +44,34 @@
     max-width: 650px;
     width: 100%;
   }
+  .advantages__inner {
+    justify-content: center;
+  }
+  .process__inner {
+    justify-content: center;
+  }
+  .process__item {
+    margin-bottom: 15px;
+    order: 1;
+  }
+   blockquote::before {
+    left: -19px;
+  }
+   blockquote::after {
+    right: -19px;
+  }
  }
 
+
+// Medium devices (tablets, less than 1024px)
+@media (max-width: 1023.98px) {
+ blockquote::before {
+    display: none;
+  }
+   blockquote::after {
+    display: none;
+  }
+}
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) { 
@@ -106,10 +132,15 @@
   .services__body--order {
     padding-left: 0;
   }
-.calculator {
-  width: 100%;
- }
+  .calculator {
+   width: 100%;
+  }
+  .process__item img {
+    width: 100%;
+  }
+ 
 
+}
 
  // Extra small devices (portrait phones, less than 650px)
 @media (max-width: 649.98px) { 
@@ -136,6 +167,21 @@
   .form__input {
     margin-bottom: 10px;
   }
+  .advantages__item {
+    margin-bottom: 30px;
+  }
+  .advantages-row {
+    flex-wrap: wrap;
+    & .advantages__item {
+    margin-bottom: 30px;
+    }
+  }
+  .advantages__inner {
+    margin-bottom: 0;
+  }
+  .process__subtitle {
+    font-size: 26px;
+  }
   
 }
 
@@ -150,5 +196,4 @@
   .price-result__button {
     max-width: 100%;
   }
-}
 }

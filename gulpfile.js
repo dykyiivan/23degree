@@ -43,6 +43,7 @@ gulp.task("css", function() {
     .src([
       "node_modules/magnific-popup/dist/magnific-popup.css",
       "node_modules/ion-rangeslider/css/ion.rangeSlider.min.css",
+      "node_modules/slick-carousel/slick/slick.css"
     ])
     .pipe(concat("_libs.scss"))
     .pipe(gulp.dest("app/scss"))
@@ -70,19 +71,18 @@ gulp.task("script", function () {
 
 // Task для JavaScript файлів
 gulp.task("js", function() {
-  return (
-    gulp
-      .src([
-        "node_modules/jquery/dist/jquery.js",  
-        "node_modules/ion-rangeslider/js/ion.rangeSlider.js",  
-      ])
-      .pipe(plumber())
-      .pipe(concat("all.min.js")) // якщо мініфакція одразу розширення min.js
-      .pipe(uglify()) //мініфікація js
-      .pipe(gulp.dest("app/js"))
-      .pipe(browserSync.reload({ stream: true }))
-      .pipe(notify("JS Done!"))
-  );
+  return gulp
+    .src([
+      "node_modules/jquery/dist/jquery.js",
+      "node_modules/ion-rangeslider/js/ion.rangeSlider.js",
+      "node_modules/slick-carousel/slick/slick.min.js"
+    ])
+    .pipe(plumber())
+    .pipe(concat("all.min.js")) // якщо мініфакція одразу розширення min.js
+    .pipe(uglify()) //мініфікація js
+    .pipe(gulp.dest("app/js"))
+    .pipe(browserSync.reload({ stream: true }))
+    .pipe(notify("JS Done!"));
 });
 
 
