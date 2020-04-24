@@ -76,7 +76,7 @@ gulp.task("js", function() {
       "node_modules/jquery/dist/jquery.js",
       "node_modules/ion-rangeslider/js/ion.rangeSlider.js",
       "node_modules/slick-carousel/slick/slick.min.js",
-      "node_modules/mixitup/dist/mixitup.min.js"
+      "node_modules/mixitup/dist/mixitup.min.js",
     ])
     .pipe(plumber())
     .pipe(concat("all.min.js")) // якщо мініфакція одразу розширення min.js
