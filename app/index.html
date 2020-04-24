@@ -34,13 +34,13 @@
           </div>
           <nav class="menu">
             <ul class="menu__list">
-              <li class="menu__item"><a href="#">Наши услуги</a></li>
-              <li class="menu__item"><a href="#">Расчитать стоимость</a></li>
-              <li class="menu__item"><a href="#">Портфолио</a></li>
-              <li class="menu__item"><a href="#">Процесс взаимодействия</a></li>
-              <li class="menu__item"><a href="#">Наша команда</a></li>
-              <li class="menu__item"><a href="#">Блог</a></li>
-              <li class="menu__item"><a href="#">Контакти</a></li>
+              <li class="menu__item"><a href="#services">Наши услуги</a></li>
+              <li class="menu__item"><a href="#price">Расчитать стоимость</a></li>
+              <li class="menu__item"><a href="#portfolio">Портфолио</a></li>
+              <li class="menu__item"><a href="#process">Процесс взаимодействия</a></li>
+              <li class="menu__item"><a href="#team">Наша команда</a></li>
+              <li class="menu__item"><a href="#blog">Блог</a></li>
+              <li class="menu__item"><a href="#contact">Контакти</a></li>
             </ul>
             <div class="menu__mobile">
               <div class="menu__burger">
@@ -67,12 +67,12 @@
       <button class="button form__button" type="submit">Оставить заявку!</button>
     </form>
     <span class="hero__text">*Мы гарантируем конфидициальность передаваемых данных</span>
-    <a class="scroll-down" href="#"><img src="images/hero/scroll-icon.svg" alt="Scroll Down"></a>
+    <a class="scroll-down" href="#services"><img src="images/hero/scroll-icon.svg" alt="Scroll Down"></a>
   </div>
 </section>
 <!-- /.hero -->
 
-<section class="services">
+<section class="services" id="services">
   <div class="container">
     <h2 class="services__title title">Наши услуги</h2>
     <div class="services__row">
@@ -113,7 +113,7 @@
 </section>
 <!-- /.services -->
 
-<section class="price">
+<section class="price" id="price">
   <div class="container">
     <h2 class="price__title title">Расчитать стоимость</h2>
     <h3 class="price__subtitle">Расчитайте предварительную стоимость разработки интерьера</h3>
@@ -166,32 +166,32 @@
 </section>
 <!-- /.price -->
 
-<section class="portfolio">
+<section class="portfolio" id="portfolio">
   <div class="container">
     <h2 class="portfolio__title title">Портфолио</h2>
     <ul class="portfolio-nav">
-      <li class="portfolio-nav__item active" data-filter="*">все проекты</li>   
+      <li class="portfolio-nav__item active" data-filter="all">все проекты</li>   
       <li class="portfolio-nav__item" data-filter=".exteriors">экстерьеры</li> 
       <li class="portfolio-nav__item" data-filter=".residential-interiors">жилые интерьеры</li> 
       <li class="portfolio-nav__item" data-filter=".public-interiors">общественные интерьеры</li> 
     </ul>
     <div class="portfolio__inner">
-      <div class="portfolio__item all exteriors">
+      <div class="portfolio__item all exteriors mix">
         <img src="images/portfolio/portfolio-img1.jpg" alt="#">
       </div>
-      <div class="portfolio__item all residential-interiors">
+      <div class="portfolio__item all residential-interiors mix">
         <img src="images/portfolio/portfolio-img2.jpg" alt="#">
       </div>
-      <div class="portfolio__item all public-interiors">
+      <div class="portfolio__item all public-interiors mix">
         <img src="images/portfolio/portfolio-img3.jpg" alt="#">
       </div>
-      <div class="portfolio__item all public-interiors">
+      <div class="portfolio__item all public-interiors mix">
        <img src="images/portfolio/portfolio-img4.jpg" alt="#">
       </div>
-      <div class="portfolio__item all exteriors">
+      <div class="portfolio__item all exteriors mix">
         <img src="images/portfolio/portfolio-img5.jpg" alt="#">
       </div>
-      <div class="portfolio__item all exteriors">
+      <div class="portfolio__item all exteriors mix">
         <img src="images/portfolio/portfolio-img6.jpg" alt="#">
       </div>
     </div>
@@ -199,7 +199,7 @@
 </section>
 <!-- /.portfolio-->
 
-<section class="advantages">
+<section class="advantages" id="advantages">
   <div class="container">
     <h2 class="advantages__title title">Почему мы лучшие?</h2>
     <div class="advantages__inner">
@@ -259,7 +259,7 @@
 </section>
 <!-- /.advantages -->
 
-<div class="process">
+<div class="process" id="process">
   <div class="container">
     <h2 class="process__title title">Процесс взаимодействия</h2>
     <div class="process__inner">
@@ -284,7 +284,7 @@
 </div>
 <!-- /.process -->
 
-<section class="customers">
+<section class="customers" id="customers">
   <div class="container">
     <h2 class="customers__title title">Нам доверяют более 50 компаний</h2>
     <div class="customers__inner">
@@ -320,7 +320,7 @@
 </section>
 <!-- /.customers -->
 
-<section class="team">
+<section class="team" id="team">
   <div class="container">
     <h2 class="team__title title">Наша команда</h2>
     <div class="team__inner">
@@ -379,7 +379,7 @@
 </section>
 <!-- /.team -->
 
-<section class="blog">
+<section class="blog" id="blog">
   <div class="container">
     <h2 class="blog__title title">Блог</h2>
     <div class="blog__inner">
@@ -400,7 +400,7 @@
 </section>
 <!-- /.blog -->
  
-<section class="contact">
+<section class="contact" id="contact">
   <div class="container">
     <h2 class="contact__title title">Остались вопросы?</h2>
     <h3 class="contact__subtitle">Задайте их в форме ниже и наши специалисты свяжуться с Вами!</h3>
@@ -417,11 +417,11 @@
       </div>
       <div class="contact__items">
         <ul class="contact__list">
-          <li class="contact__item contact__item--phone"><a href="tel:88008766677">8(800)876 66 77</a></li>
-          <li class="contact__item contact__item--whatsapp"><a href="whatsapp://add?number=88008766678">8(800)876 66 78</a></li>
-          <li class="contact__item contact__item--email"><a href="mailto:sales@23degree.com">sales@23degree.com</a></li>
-          <li class="contact__item contact__item--skype"><a href="skype:example123?chat">skype: 23degree</a></li>
-          <li class="contact__item contact__item--telegram"><a href="tg://resolve?domain=username">telegram: 23degree</a></li>
+          <li class="contact__item contact__item--phone"><a href="tel:88008766677" title="8(800)8766677">8(800)876 66 77</a></li>
+          <li class="contact__item contact__item--whatsapp"><a href="whatsapp://add?number=88008766678" title="8(800)8766678">8(800)876 66 78</a></li>
+          <li class="contact__item contact__item--email"><a href="mailto:sales@23degree.com" title="sales@23degree.com">sales@23degree.com</a></li>
+          <li class="contact__item contact__item--skype"><a href="skype:example123?chat" title="skype: 23degree">skype: 23degree</a></li>
+          <li class="contact__item contact__item--telegram"><a href="tg://resolve?domain=username" title="telegram: 23degree">telegram: 23degree</a></li>
         </ul>
         <span class="сontact__work-schedule">График работы: с 9-00 до 18-00. Пн.-Пт.</span>
       </div>

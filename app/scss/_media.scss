@@ -111,6 +111,26 @@
   .scroll-down {
     bottom: 10px;
   }
+  .portfolio-nav {
+    display: block;
+  }
+  .portfolio-nav__item {
+    border: 1px solid #19b5fe;
+    border-radius: 5px;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .portfolio .mixitup-control-active {
+    transform: scale(1);
+  }
+  .portfolio-nav__item:first-child,
+  .portfolio-nav__item:last-child {
+    border-right: 1px solid #19b5fe;
+    border-radius: 5px;
+  }
+  .portfolio-nav__item:after {
+    display: none;
+  }
  }
 
  // Small devices (landscape phones, less than 800px)
@@ -178,7 +198,9 @@
   .footer-nav__list {
     column-count: 2;
   }
-  
+  .portfolio-nav__item {
+    width: 100%;
+  }
 } 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 

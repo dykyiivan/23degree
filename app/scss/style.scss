@@ -222,6 +222,7 @@ body {
   left: 50%;
   bottom: 55px;
   transform: translateX(-50%);
+  scroll-behavior: smooth;
 }
 
 /*
@@ -519,12 +520,6 @@ body {
       border-bottom: 1px solid $blue-text;
       text-transform: uppercase;
       cursor: pointer;
-      &.active {
-        color: #fff;
-        background: $btn-background;
-        transform: scale(1.1);
-        border-radius: 5px;
-      }
       &:after {
         content: "";
         position: absolute;
@@ -551,6 +546,13 @@ body {
       }
     }
   }
+.mixitup-control-active {
+  color: #fff;
+  background: $btn-background;
+  transform: scale(1.1);
+  border-radius: 5px;
+  
+}
   &__item {
     position: relative;
     width: 360px;
