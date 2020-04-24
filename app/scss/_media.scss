@@ -79,6 +79,13 @@
    blockquote::after {
     display: none;
   }
+  .contact {
+    background-size: cover;
+  }
+  .contact__input {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 // Medium devices (tablets, less than 992px)
@@ -158,6 +165,19 @@
   .button__rate {
     margin: 5px;
   }
+  .contact__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .contact__list {
+    margin-top: 50px;
+  }
+  .contact__items {
+    padding-left: 40px;
+  }
+  .footer-nav__list {
+    column-count: 2;
+  }
   
 } 
 // Extra small devices (portrait phones, less than 576px)
@@ -189,6 +209,16 @@
   }
   .process__subtitle {
     font-size: 26px;
+  }
+  .footer__container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer-nav__item {
+    margin-bottom: 10px;
+  }
+  .footer-nav {
+    margin-bottom: 30px;
   }
   
 }
